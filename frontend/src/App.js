@@ -20,6 +20,7 @@ import TransferRevenueLineChart from './components/TransferRevenueLineChart'
 import LineupPlanner from "./components/LineupPlanner"
 import HelpIcon from './components/HelpIcon'
 import MarketValueChangesTable from './components/MarketValueChangesTable'
+import TeamValueLineChart from './components/TeamValueLineChart'
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } })
 const lightTheme = createTheme({ palette: { mode: 'light' } })
@@ -58,12 +59,11 @@ function App() {
                 <Typography variant="h4" sx={{ padding: '15px' }}>Marktwertveränderungen</Typography>
                 <MarketValueChangesTable />
               </Paper>
-              {/* Re-enable when matchdays start
               <Paper sx={{ marginTop: '25px' }} elevation={5}>
                 <Typography variant="h4" sx={{ padding: '15px' }}>Teamwert</Typography>
                 <TeamValueLineChart darkModeEnabled={darkModeEnabled} />
               </Paper>
-              */}
+             
               <Paper sx={{ marginTop: '25px' }} elevation={5}>
                 <Typography variant="h4" sx={{ padding: '15px' }}>Aufstellungs Planer <HelpIcon text="Der aktuelle Kontostand kann eingegeben und Spieler in der letzten Spalte zum Verkaufen markiert werden. Der neue Kontostand wird dynamisch ausgerechnet. Mögliche Formationen werden über der Tabelle angezeigt: Spieler im Kader (blau), mögliche Formation (grün), nicht mögliche Formation (rot)" /></Typography>
                 <LineupPlanner />
@@ -81,7 +81,7 @@ function App() {
             </TabPanel>
             <TabPanel sx={{ padding: 0 }} value="3">
               <Paper sx={{ marginTop: '25px' }} elevation={5}>
-                <Typography variant="h4" sx={{ padding: '15px' }}>Gebundene Spieler</Typography>
+                <Typography variant="h4" sx={{ padding: '15px' }}>Gekaufte Spieler</Typography>
                 <TakenPlayersTable />
               </Paper>
               <Paper sx={{ marginTop: '25px' }} elevation={5}>

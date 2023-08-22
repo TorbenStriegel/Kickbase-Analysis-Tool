@@ -84,7 +84,7 @@ def get_players_mw_change():
             if 'leaguePlayer' in player_stats.keys():
                 manager_name = player_stats['leaguePlayer']['userName']
             else:
-                manager_name = 'Computer'
+                manager_name = 'Kickbase'
 
             market_values = player_stats['marketValues']
             market_values.reverse()

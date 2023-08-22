@@ -23,7 +23,7 @@ def get_turnovers():
             elif 'sn' in buy['meta']:
                 trade_partner = buy['meta']['sn']
             else:
-                trade_partner = 'Computer'
+                trade_partner = 'Kickbase'
 
             transfers.append({'date': parser.parse(buy['date']),
                               'first_name': buy['meta']['pfn'],
@@ -66,7 +66,7 @@ def get_turnovers():
                                 'last_name': transfer['last_name'],
                                 'value': transfer['value'],
                                 'type': 'buy',
-                                'trade_partner': 'Computer',
+                                'trade_partner': 'Kickbase',
                                 'team_id': transfer['team_id'],
                                 'player_id': transfer['player_id'],
                                 'user': transfer['user']}
