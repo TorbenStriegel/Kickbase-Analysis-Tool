@@ -1,0 +1,6 @@
+.gitignore
+Dockerfile
+.github
+.idea
+.venv
+__pycache__/

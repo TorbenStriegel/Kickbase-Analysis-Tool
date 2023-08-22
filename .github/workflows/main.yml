@@ -1,0 +1,64 @@
+
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: combined workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  schedule:
+    - cron: '10 2/6 * * *'
+
+jobs:
+  combined-workflow:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.12"
+    
+    - name: Install dependencies
+      working-directory: data/
+      run: |
+        python -m pip install --upgrade pip
+        pip install pipenv
+        pipenv install
+    
+    - name: Run code
+      working-directory: data/
+      run: python -m pipenv run python main.py --mail ${{ secrets.KB_MAIL }} --pw ${{ secrets.KB_PW }} --league="${{ secrets.KB_LEAGUE }}" --start ${{ secrets.START_DATE }}
+
+    - name: Copy result
+      run: cp data/data/*.json frontend/src/data
+
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Build frontend
+      working-directory: frontend/
+      run: |
+        ls -la
+        npm ci
+        CI=false && npm run build --if-present
+    
+    - name: Deploy frontend
+      working-directory: frontend/
+      run: |
+        git config --global user.name $user_name
+        git config --global user.email $user_email
+        git remote set-url origin https://${github_token}@github.com/${repository}
+        npm run deploy
+      env:
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        github_token: ${{ secrets.TOKEN }}
+        repository: ${{ github.repository }}
