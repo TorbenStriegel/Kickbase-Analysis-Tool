@@ -91,13 +91,6 @@ function App() {
             </TabPanel>
           </TabContext>
         </Box>
-        <Paper sx={{ position: 'fixed', bottom: 0, width: '1000px' }} elevation={5}>
-          <Typography variant="h6" sx={{ padding: '15px' }}>Disclaimer</Typography>
-          <Typography sx={{ padding: '0px 15px 15px' }}>
-            This site is for educational and non-profit purposes only.<br />
-            All trademarks, logos and brand names are the property of their respective owners.
-          </Typography>
-        </Paper>
       </div>
     </ThemeProvider>
   )

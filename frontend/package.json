@@ -1,7 +1,7 @@
 {
   "name": "kickbase-analysis",
   "version": "0.1.0",
-  "homepage": "https://supermarker331.github.io/kickbase",
+  "homepage": "https://supermarker331.github.io/Kickbase",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
