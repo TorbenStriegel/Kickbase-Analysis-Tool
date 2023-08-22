@@ -94,7 +94,7 @@ function MarketValueChangesTable() {
         }
     ]
 
-    const rows = data.filter(row => row.manager !== "Kickbase").map((row, i) => (
+    const rows = data.filter(row => row.manager !== "Temp").map((row, i) => (
         {
             id: i,
             teamLogo: process.env.PUBLIC_URL + "/images/" + row.team_id + ".png",

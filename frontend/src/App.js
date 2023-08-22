@@ -21,13 +21,15 @@ import LineupPlanner from "./components/LineupPlanner"
 import HelpIcon from './components/HelpIcon'
 import MarketValueChangesTable from './components/MarketValueChangesTable'
 import TeamValueLineChart from './components/TeamValueLineChart'
+import { Button } from '@mui/material'
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } })
 const lightTheme = createTheme({ palette: { mode: 'light' } })
 
 function App() {
   const [selectedTab, setSelectedTab] = useState("1")
-  const [darkModeEnabled, setDarkModeEnabled] = useState(false)
+  const [showMarketValueChangesTable, setshowMarketValueChangesTable] = useState(false)
+  const [darkModeEnabled, setDarkModeEnabled] = useState(true)
 
   return (
     <ThemeProvider theme={darkModeEnabled ? darkTheme : lightTheme}>
@@ -46,6 +48,9 @@ function App() {
                 </Grid>
                 <Grid item><Typography variant="button" style={{ opacity: '0.7' }}>Stand: {new Date(timestamp.time).toLocaleString('de-DE')}</Typography></Grid>
                 <Grid item>
+                  <Button onClick={(e) => setshowMarketValueChangesTable(!showMarketValueChangesTable)} />
+                </Grid>
+                <Grid item>
                   <FormControlLabel control={<Switch checked={darkModeEnabled} onChange={(e) => setDarkModeEnabled(e.target.checked)} />} label={<Typography variant="button" style={{ opacity: '0.7' }}>Dark Mode</Typography>} />
                 </Grid>
               </Grid>
@@ -55,18 +60,17 @@ function App() {
                 <Typography variant="h4" sx={{ padding: '15px' }}>Transfermarkt</Typography>
                 <MarketTable />
               </Paper>
-              {/*
-                            <Paper sx={{ marginTop: '25px' }} elevation={5}>
-                <Typography variant="h4" sx={{ padding: '15px' }}>Marktwertveränderungen</Typography>
-                <MarketValueChangesTable />
-              </Paper>
-              */}
-
+              {showMarketValueChangesTable ?
+                <Paper sx={{ marginTop: '25px' }} elevation={5}>
+                  <Typography variant="h4" sx={{ padding: '15px' }}>Marktwertveränderungen</Typography>
+                  <MarketValueChangesTable />
+                </Paper>
+                : null}
               <Paper sx={{ marginTop: '25px' }} elevation={5}>
                 <Typography variant="h4" sx={{ padding: '15px' }}>Teamwert</Typography>
                 <TeamValueLineChart darkModeEnabled={darkModeEnabled} />
               </Paper>
-             
+
               <Paper sx={{ marginTop: '25px' }} elevation={5}>
                 <Typography variant="h4" sx={{ padding: '15px' }}>Aufstellungs Planer <HelpIcon text="Der aktuelle Kontostand kann eingegeben und Spieler in der letzten Spalte zum Verkaufen markiert werden. Der neue Kontostand wird dynamisch ausgerechnet. Mögliche Formationen werden über der Tabelle angezeigt: Spieler im Kader (blau), mögliche Formation (grün), nicht mögliche Formation (rot)" /></Typography>
                 <LineupPlanner />
