@@ -55,10 +55,13 @@ function App() {
                 <Typography variant="h4" sx={{ padding: '15px' }}>Transfermarkt</Typography>
                 <MarketTable />
               </Paper>
-              <Paper sx={{ marginTop: '25px' }} elevation={5}>
+              {/*
+                            <Paper sx={{ marginTop: '25px' }} elevation={5}>
                 <Typography variant="h4" sx={{ padding: '15px' }}>Marktwertveränderungen</Typography>
                 <MarketValueChangesTable />
               </Paper>
+              */}
+
               <Paper sx={{ marginTop: '25px' }} elevation={5}>
                 <Typography variant="h4" sx={{ padding: '15px' }}>Teamwert</Typography>
                 <TeamValueLineChart darkModeEnabled={darkModeEnabled} />
