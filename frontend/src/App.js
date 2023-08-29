@@ -60,9 +60,15 @@ function App() {
                 <Typography variant="h4" sx={{ padding: '15px' }}>Transfermarkt</Typography>
                 <MarketTable />
               </Paper>
+              {/*
               <Paper sx={{ marginTop: '25px' }} elevation={5}>
                 <Typography variant="h4" sx={{ padding: '15px' }}>Teamwert</Typography>
                 <TeamValueLineChart darkModeEnabled={darkModeEnabled} />
+              </Paper>
+              */}
+              <Paper sx={{ marginTop: '25px' }} elevation={5}>
+                <Typography variant="h4" sx={{ padding: '15px' }}>Aufstellungs Planer <HelpIcon text="Der aktuelle Kontostand kann eingegeben und Spieler in der letzten Spalte zum Verkaufen markiert werden. Der neue Kontostand wird dynamisch ausgerechnet. Mögliche Formationen werden über der Tabelle angezeigt: Spieler im Kader (blau), mögliche Formation (grün), nicht mögliche Formation (rot)" /></Typography>
+                <LineupPlanner />
               </Paper>
               {showMarketValueChangesTable ?
                 <Paper sx={{ marginTop: '25px' }} elevation={5}>
@@ -70,11 +76,6 @@ function App() {
                   <MarketValueChangesTable />
                 </Paper>
                 : null}
-
-              <Paper sx={{ marginTop: '25px' }} elevation={5}>
-                <Typography variant="h4" sx={{ padding: '15px' }}>Aufstellungs Planer <HelpIcon text="Der aktuelle Kontostand kann eingegeben und Spieler in der letzten Spalte zum Verkaufen markiert werden. Der neue Kontostand wird dynamisch ausgerechnet. Mögliche Formationen werden über der Tabelle angezeigt: Spieler im Kader (blau), mögliche Formation (grün), nicht mögliche Formation (rot)" /></Typography>
-                <LineupPlanner />
-              </Paper>
             </TabPanel>
             <TabPanel sx={{ padding: 0 }} value="2">
               <Paper sx={{ marginTop: '25px' }} elevation={5}>
