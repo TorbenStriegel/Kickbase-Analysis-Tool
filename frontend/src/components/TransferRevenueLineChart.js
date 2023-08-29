@@ -23,12 +23,15 @@ function TransferRevenueLineChart(props) {
                     format: '%Y-%m-%d',
                     useUTC: false,
                     precision: 'day',
+                    nice: true,
                 }}
                 xFormat="time:%Y-%m-%d"
                 yScale={{
                     type: 'linear',
                     stacked: false,
-                    min: -5000000
+                    min: 'auto',
+                    max: 'auto',
+                    nice: true,
                 }}
                 yFormat={value => `${new Intl.NumberFormat('de-DE', {
                     maximumFractionDigits: 0
