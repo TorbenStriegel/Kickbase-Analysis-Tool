@@ -20,7 +20,7 @@ import TransferRevenueLineChart from './components/TransferRevenueLineChart'
 import LineupPlanner from "./components/LineupPlanner"
 import HelpIcon from './components/HelpIcon'
 import MarketValueChangesTable from './components/MarketValueChangesTable'
-import TeamValueLineChart from './components/TeamValueLineChart'
+//import TeamValueLineChart from './components/TeamValueLineChart'
 import { Button } from '@mui/material'
 
 const darkTheme = createTheme({ palette: { mode: 'dark' } })
