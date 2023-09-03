@@ -26,7 +26,10 @@ function TeamValueLineChart(props) {
                 yScale={{
                     type: 'linear',
                     stacked: false,
-                    min: 100000000
+                    min: 'auto',
+                    max: 'auto',
+                    nice: true,
+
                 }}
                 yFormat={value => `${Number(value).toLocaleString('de-DE', {
                     minimumFractionDigits: 0,
