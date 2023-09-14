@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Kickbase/static/js/main.80d62ede.js",
+    "main.js": "/Kickbase/static/js/main.e1978b7f.js",
     "index.html": "/Kickbase/index.html",
-    "main.80d62ede.js.map": "/Kickbase/static/js/main.80d62ede.js.map"
+    "main.e1978b7f.js.map": "/Kickbase/static/js/main.e1978b7f.js.map"
   },
   "entrypoints": [
-    "static/js/main.80d62ede.js"
+    "static/js/main.e1978b7f.js"
   ]
 }
