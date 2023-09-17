@@ -1,7 +1,7 @@
 {
   "name": "kickbase-analysis",
   "version": "0.1.0",
-  "homepage": "https://supermarker331.github.io/Kickbase",
+  "homepage": "https://torbenstriegel.github.io/Kickbase-Analysis-Tool/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
