@@ -4,11 +4,6 @@
 
 This repository contains some python code for retrieving data from the kickbase API and also a react web app for visualization.
 
-## Deployment with GitHub Pages 
-
-The data collection and building of the web app is automated by cron jobs and runs daily. The results are published to this GitHub Pages website https://roman-la.github.io/kickbase-analysis/.
-If you are interested in how I set it up, check out this guide https://github.com/gitname/react-gh-pages.
-
 ## Run locally
 
 If you are interested in running the code for your own league locally, follow this small guide.
@@ -36,6 +31,6 @@ npm install
 npm start
 ```
 
-## Contact
 
-Feel free to contact me on discord (r0man51) or open an issue if you have any questions.
+## Credits goes to
+[@r0man51](https://github.com/roman-la)
