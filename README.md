@@ -4,6 +4,8 @@
 
 This repository contains some python code for retrieving data from the kickbase API and also a react web app for visualization.
 
+DEMO: https://torbenstriegel.github.io/Kickbase-Analysis-Tool/
+
 ## Run locally
 
 If you are interested in running the code for your own league locally, follow this small guide.
