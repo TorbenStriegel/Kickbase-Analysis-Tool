@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Kickbase-Analysis-Tool/static/js/main.e9a5535b.js",
+    "main.js": "/Kickbase-Analysis-Tool/static/js/main.346eebfb.js",
     "index.html": "/Kickbase-Analysis-Tool/index.html",
-    "main.e9a5535b.js.map": "/Kickbase-Analysis-Tool/static/js/main.e9a5535b.js.map"
+    "main.346eebfb.js.map": "/Kickbase-Analysis-Tool/static/js/main.346eebfb.js.map"
   },
   "entrypoints": [
-    "static/js/main.e9a5535b.js"
+    "static/js/main.346eebfb.js"
   ]
 }
